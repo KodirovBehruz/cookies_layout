@@ -50,6 +50,12 @@
 		<div class="container">
 			<img src="images/line2.png" alt="Line" class="line2">
 			<div class="common-title">Выберите печенье</div>
+			<div class="sugar-free-block">
+				<div>Все</div>
+				<input type="checkbox" id="switch" onchange="switchSugarFree(event)" />
+				<label for="switch"></label>
+				<div>Без сахара</div>
+			</div>
 			<div class="products-items">
 				<div class="products-item">
 					<div class="products-item-image">
@@ -67,7 +73,7 @@
 								<div class="products-item-price" data-base-price="20">20 $</div>
 								<div class="products-item-weight">2 шт./ 200 гр.</div>
 							</div>
-							<button class="button">Заказать</button>
+							<button class="button" onclick="selectProduct('Лучшие друзья', 20)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -86,11 +92,11 @@
 								<div class="products-item-price" data-base-price="24">24 $</div>
 								<div class="products-item-weight">2 шт./ 200 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Шоколадный француз', 24)">Заказать</button>
 						</div>
 					</div>
 				</div>
-				<div class="products-item">
+				<div class="products-item sugar-free">
 					<div class="products-item-image">
 						<img src="images/3.png" alt="Product">
 					</div>
@@ -105,7 +111,7 @@
 								<div class="products-item-price" data-base-price="18">18 $</div>
 								<div class="products-item-weight">2 шт./ 200 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Овсянка с изюмом, Сэр!', 18)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -124,7 +130,7 @@
 								<div class="products-item-price" data-base-price="24">24 $</div>
 								<div class="products-item-weight">2 шт./ 200 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Шоколадное наслаждение', 24)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -143,7 +149,7 @@
 								<div class="products-item-price" data-base-price="20">20 $</div>
 								<div class="products-item-weight">2 шт./ 200 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Арахисовый рай', 20)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -162,7 +168,7 @@
 								<div class="products-item-price" data-base-price="18">18 $</div>
 								<div class="products-item-weight">2 шт./ 200 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Шоколадный ореховый деликатес', 18)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -181,11 +187,11 @@
 								<div class="products-item-price" data-base-price="36">36 $</div>
 								<div class="products-item-weight">4 шт./ 400 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Ассорти фирменного печенья', 36)">Заказать</button>
 						</div>
 					</div>
 				</div>
-				<div class="products-item">
+				<div class="products-item sugar-free">
 					<div class="products-item-image">
 						<img src="images/8.png" alt="Product">
 					</div>
@@ -201,7 +207,7 @@
 								<div class="products-item-price" data-base-price="33">33 $</div>
 								<div class="products-item-weight">4 шт./ 400 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Лимонное печенье', 33)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -220,7 +226,7 @@
 								<div class="products-item-price" data-base-price="38">38 $</div>
 								<div class="products-item-weight">4 шт./ 400 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Любители шоколада', 38)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -239,11 +245,11 @@
 								<div class="products-item-price" data-base-price="33">33 $</div>
 								<div class="products-item-weight">4 шт./ 400 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Карамель и кокос', 33)">Заказать</button>
 						</div>
 					</div>
 				</div>
-				<div class="products-item">
+				<div class="products-item sugar-free">
 					<div class="products-item-image">
 						<img src="images/11.png" alt="Product">
 					</div>
@@ -258,7 +264,7 @@
 								<div class="products-item-price" data-base-price="39">39 $</div>
 								<div class="products-item-weight">4 шт./ 400 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Веганское с шоколадной крошкой', 39)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -278,7 +284,7 @@
 								<div class="products-item-price" data-base-price="35">35 $</div>
 								<div class="products-item-weight">4 шт./ 400 гр.</div>
 							</div>
-							<button class="button violet-button">Заказать</button>
+							<button class="button" onclick="selectProduct('Крем-брюле ореховое печенье', 35)">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -317,10 +323,10 @@
 						в мир сладких наслаждений.
 					</div>
 					<div class="order-form-inputs">
-						<input type="text" placeholder="Выберите печенье" id="product">
+						<input type="text" placeholder="Выберите печенье" id="product" readonly>
 						<input type="text" placeholder="Ваше имя" id="name">
 						<input type="text" placeholder="Ваш телефон" id="phone">
-						<button class="button violet-button" id="order-action">Оформить заказ</button>
+						<button class="button" id="order-action">Оформить заказ</button>
 					</div>
 				</div>
 				<div class="order-block-image">

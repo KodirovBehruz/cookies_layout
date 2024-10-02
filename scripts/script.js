@@ -9,11 +9,34 @@ for (let i = 0; i < links.length; i++) {
     }
 }
 
-const buttons = document.querySelectorAll('.products-item .button')
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].onclick = function () {
-        document.getElementById('order').scrollIntoView({behavior: 'smooth'})
-    }
+// const buttons = document.querySelectorAll('.products-item .button')
+// for (let i = 0; i < buttons.length; i++) {
+//     buttons[i].onclick = function () {
+//         document.getElementById('order').scrollIntoView({behavior: 'smooth'})
+//     }
+// }
+
+function selectProduct(productName, productPrice) {
+    document.getElementById('order').scrollIntoView({behavior: 'smooth'});
+
+    // Заполнение поля продукта
+    const productInput = document.getElementById('product');
+    productInput.value = `${productName} (${productPrice} $)`;
+}
+
+function switchSugarFree(event) {
+    const isChecked = event.target.checked;
+    const products = document.querySelectorAll('.products-item');
+
+    products.forEach(product => {
+        const isSugarFree = product.classList.contains('sugar-free');
+
+        if (isChecked && !isSugarFree) {
+            product.style.display = 'none';
+        } else {
+            product.style.display = 'block';
+        }
+    })
 }
 
 const prices = document.getElementsByClassName("products-item-price")
