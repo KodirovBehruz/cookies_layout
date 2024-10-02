@@ -1,0 +1,33 @@
+@mixin container() {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin bg-line($top, $left) {
+    position: absolute;
+    z-index: -1;
+    top: $top;
+    left: $left;
+}
+
+@mixin button($bg, $color) {
+    background-color: $bg;
+    color: $color;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin common-title() {
+    font-family: "Steppe-ExtraBold", sans-serif;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+}

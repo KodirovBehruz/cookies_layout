@@ -1,0 +1,326 @@
+@import "normalize.css";
+@font-face {
+  font-family: "Steppe-Book";
+  src: url("../../fonts/Steppe-Book.ttf");
+}
+@font-face {
+  font-family: "Steppe-ExtraBold";
+  src: url("../../fonts/Steppe-ExtraBold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #5243F4;
+  font-family: "Steppe-Book", sans-serif;
+  color: white;
+}
+body .main {
+  position: relative;
+  overflow: hidden;
+}
+body .main .header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+body .main .header .container .logo img {
+  vertical-align: bottom;
+}
+body .main .header .container .menu {
+  margin-left: 250px;
+}
+body .main .header .container .menu .menu-list {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+body .main .header .container .menu .menu-list .menu-item a {
+  color: white;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .main .header .container .menu .menu-list a:hover {
+  border-bottom: 2px solid white;
+}
+body .main .main-content {
+  padding-top: 161px;
+  padding-bottom: 200px;
+}
+body .main .main-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body .main .main-content .container .line1 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: calc(100% - 960px);
+}
+body .main .main-content .container .main-info {
+  max-width: 811px;
+}
+body .main .main-content .container .main-info .main-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 90px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+body .main .main-content .container .main-info .main-text {
+  max-width: 697px;
+  font-size: 18px;
+  line-height: 130%;
+  margin-bottom: 40px;
+}
+body .main .main-content .container .main-info .main-action button {
+  background-color: white;
+  color: #5243F4;
+  border-radius: 60px;
+  width: 178px;
+  height: 58px;
+  box-sizing: border-box;
+  padding: 18px;
+  text-align: center;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+body .main .main-content .container .main-info .main-action button:hover {
+  background-color: #eeeeee;
+}
+body .main .main-content .container .main-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+body .main .products {
+  padding: 100px 0;
+  position: relative;
+}
+body .main .products .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body .main .products .container .line2 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: calc(100% - 960px);
+}
+body .main .products .container .common-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 60px;
+  line-height: 100%;
+  text-align: center;
+}
+body .main .products .container .products-items {
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  gap: 90px 24px;
+  margin-top: 110px;
+}
+body .main .products .container .products-items .products-item {
+  background-color: white;
+  color: #5D3427;
+}
+body .main .products .container .products-items .products-item .products-item-image {
+  height: 202px;
+  text-align: center;
+}
+body .main .products .container .products-items .products-item .products-item-image img {
+  position: relative;
+  height: 272px;
+  top: -70px;
+  max-width: 100%;
+}
+body .main .products .container .products-items .products-item .products-item-details {
+  padding: 24px;
+}
+body .main .products .container .products-items .products-item .products-item-details .products-item-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+body .main .products .container .products-items .products-item .products-item-details .products-item-text {
+  height: 110px;
+  font-size: 14px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+body .main .products .container .products-items .products-item .products-item-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main .products .container .products-items .products-item .products-item-extra .products-item-info .products-item-price {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  color: #5243F4;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+body .main .products .container .products-items .products-item .products-item-extra .products-item-info .products-item-weight {
+  font-size: 12px;
+}
+body .main .products .container .products-items .products-item .products-item-extra .button {
+  background-color: #5243F4;
+  color: white;
+  border-radius: 60px;
+  width: 178px;
+  height: 58px;
+  box-sizing: border-box;
+  padding: 18px;
+  text-align: center;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+body .main .products .container .products-items .products-item .products-item-extra .button:hover {
+  background-color: #3b2cd8;
+  color: white;
+}
+body .main .love {
+  padding: 64px 0 150px 0;
+}
+body .main .love .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body .main .love .container .common-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 60px;
+  line-height: 100%;
+  text-align: center;
+}
+body .main .love .container .love-items {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+body .main .love .container .love-items .love-item {
+  width: 590px;
+  height: 453px;
+}
+body .main .love .container .love-items .love-item-white {
+  background-color: white;
+  color: #5D3427;
+  padding: 110px 80px;
+  box-sizing: border-box;
+}
+body .main .love .container .love-items .love-item-white .love-item-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 24px;
+  line-height: 110%;
+  margin-bottom: 20px;
+}
+body .main .love .container .love-items .love-item-white .love-item-text {
+  font-size: 18px;
+  line-height: 130%;
+}
+body .main .order {
+  padding-bottom: 102px;
+  position: relative;
+}
+body .main .order .line3 {
+  position: absolute;
+  z-index: -1;
+  top: -920px;
+  left: 0;
+}
+body .main .order .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+body .main .order .container .common-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 60px;
+  line-height: 100%;
+  text-align: center;
+}
+body .main .order .container .order-bg-image {
+  position: absolute;
+  top: 0;
+  right: calc(100% - 810px);
+  z-index: -1;
+}
+body .main .order .container .order-block {
+  margin-top: 103px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(50px);
+  display: flex;
+}
+body .main .order .container .order-block .order-form {
+  margin-left: 200px;
+  max-width: 387px;
+  padding: 40px 0 44px 0;
+  box-sizing: border-box;
+}
+body .main .order .container .order-block .order-form .order-form-text {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 18px;
+  line-height: 130%;
+}
+body .main .order .container .order-block .order-form .order-form-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+body .main .order .container .order-block .order-form .order-form-inputs input {
+  color: white;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 60px;
+  margin-bottom: 16px;
+  padding: 24px 22px;
+  width: 385px;
+  height: 68px;
+  background: transparent;
+  box-sizing: border-box;
+  outline: none;
+}
+body .main .order .container .order-block .order-form .order-form-inputs input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .main .order .container .order-block .order-form .order-form-inputs .button {
+  background-color: #5243F4;
+  color: white;
+  border-radius: 60px;
+  width: 178px;
+  height: 58px;
+  box-sizing: border-box;
+  padding: 18px;
+  text-align: center;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 387px;
+  height: 71px;
+}
+body .main .order .container .order-block .order-form .order-form-inputs .button:hover {
+  background-color: #3b2cd8;
+  color: white;
+}
+body .main .order .container .order-block .order-block-image {
+  height: 501px;
+  margin-left: 109px;
+}
+body .main .footer {
+  padding: 126px 0 50px 0;
+  text-align: center;
+}
+body .main .footer .rights {
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+/*# sourceMappingURL=style.css.map */
