@@ -53,6 +53,7 @@ body .main .currency {
 }
 body .main .header {
   margin-top: 20px;
+  margin-left: 20px;
 }
 body .main .header .container {
   max-width: 1200px;
@@ -132,6 +133,70 @@ body .main .main-content .container .main-image {
   top: 0;
   right: 0;
   z-index: -1;
+}
+@media (max-width: 1200px) {
+  body .main .main-content {
+    padding-top: 120px;
+    padding-bottom: 150px;
+    position: relative;
+  }
+  body .main .main-content .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  body .main .main-content .container .main-info {
+    max-width: 600px;
+  }
+  body .main .main-content .container .main-info .main-title {
+    font-size: 60px;
+  }
+  body .main .main-content .container .main-info .main-text {
+    font-size: 16px;
+    line-height: 130%;
+  }
+  body .main .main-content .main-image {
+    width: 60%;
+    height: auto;
+    top: 0;
+    right: 0;
+  }
+}
+@media (max-width: 768px) {
+  body .main .main-content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  body .main .main-content .container .main-info {
+    max-width: 100%;
+  }
+  body .main .main-content .container .main-info .main-title {
+    font-size: 40px;
+  }
+  body .main .main-content .container .main-info .main-text {
+    font-size: 16px;
+    line-height: 120%;
+  }
+  body .main .main-content .container .main-action button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 480px) {
+  body .main .main-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  body .main .main-content .container .main-info .main-title {
+    font-size: 30px;
+  }
+  body .main .main-content .container .main-info .main-text {
+    font-size: 12px;
+    line-height: 120%;
+  }
+  body .main .main-content .container .main-action button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
 body .main .products {
   padding: 100px 0;
@@ -259,6 +324,33 @@ body .main .products .container .products-items .products-item .products-item-ex
   background-color: #3b2cd8;
   color: white;
 }
+@media (max-width: 1200px) {
+  body .main .products {
+    padding: 80px 0;
+  }
+  body .main .products .container .products-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px 20px;
+  }
+}
+@media (max-width: 768px) {
+  body .main .products {
+    padding: 60px 0;
+  }
+  body .main .products .container .products-items {
+    grid-template-columns: 1fr;
+    gap: 40px 20px;
+  }
+}
+@media (max-width: 480px) {
+  body .main .products {
+    padding: 40px 0;
+  }
+  body .main .products .container .products-items {
+    grid-template-columns: 1fr;
+    gap: 20px 10px;
+  }
+}
 body .main .love {
   padding: 64px 0 150px 0;
 }
@@ -276,26 +368,106 @@ body .main .love .container .love-items {
   margin-top: 40px;
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 }
 body .main .love .container .love-items .love-item {
   width: 590px;
   height: 453px;
 }
-body .main .love .container .love-items .love-item-white {
+body .main .love .container .love-items .love-item.love-item-white {
   background-color: white;
   color: #5D3427;
   padding: 110px 80px;
   box-sizing: border-box;
 }
-body .main .love .container .love-items .love-item-white .love-item-title {
+body .main .love .container .love-items .love-item.love-item-white .love-item-title {
   font-family: "Steppe-ExtraBold", sans-serif;
   font-size: 24px;
   line-height: 110%;
   margin-bottom: 20px;
 }
-body .main .love .container .love-items .love-item-white .love-item-text {
+body .main .love .container .love-items .love-item.love-item-white .love-item-text {
   font-size: 18px;
   line-height: 130%;
+}
+body .main .love .container .love-items .love-item.love-item-image img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  body .main .love {
+    padding: 50px 0 120px 0;
+  }
+  body .main .love .love-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .main .love .love-items .love-item {
+    width: 100%;
+  }
+  body .main .love .love-items .love-item.love-item-white {
+    padding: 80px 40px;
+  }
+  body .main .love .love-items .love-item.love-item-white .love-item-title {
+    font-size: 22px;
+  }
+  body .main .love .love-items .love-item.love-item-white .love-item-text {
+    font-size: 16px;
+  }
+  body .main .love .love-items .love-item.love-item-image img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  body .main .love {
+    padding: 40px 0 100px 0;
+  }
+  body .main .love .love-items {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  body .main .love .love-items .love-item {
+    width: 100%;
+  }
+  body .main .love .love-items .love-item.love-item-white {
+    padding: 60px 20px;
+  }
+  body .main .love .love-items .love-item.love-item-white .love-item-title {
+    font-size: 20px;
+  }
+  body .main .love .love-items .love-item.love-item-white .love-item-text {
+    font-size: 14px;
+  }
+  body .main .love .love-items .love-item.love-item-image img {
+    max-width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  body .main .love {
+    padding: 30px 0 80px 0;
+  }
+  body .main .love .love-items {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  body .main .love .love-items .love-item {
+    width: 100%;
+  }
+  body .main .love .love-items .love-item.love-item-white {
+    padding: 40px 10px;
+  }
+  body .main .love .love-items .love-item.love-item-white .love-item-title {
+    font-size: 18px;
+  }
+  body .main .love .love-items .love-item.love-item-white .love-item-text {
+    font-size: 12px;
+  }
+  body .main .love .love-items .love-item.love-item-image img {
+    max-width: 60%;
+  }
 }
 body .main .order {
   padding-bottom: 102px;
@@ -338,8 +510,9 @@ body .main .order .container .order-block .order-form {
 }
 body .main .order .container .order-block .order-form .order-form-text {
   font-family: "Steppe-ExtraBold", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 130%;
+  text-align: center;
 }
 body .main .order .container .order-block .order-form .order-form-inputs {
   display: flex;
@@ -394,6 +567,39 @@ body .main .footer .rights {
   margin-top: 14px;
   font-size: 18px;
   line-height: 130%;
+}
+@media (max-width: 1200px) {
+  body .main .footer {
+    padding: 100px 0 40px 0;
+  }
+  body .main .footer .logo img {
+    max-width: 180px;
+  }
+  body .main .footer .rights {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  body .main .footer {
+    padding: 80px 0 30px 0;
+  }
+  body .main .footer .logo img {
+    max-width: 150px;
+  }
+  body .main .footer .rights {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  body .main .footer {
+    padding: 60px 0 20px 0;
+  }
+  body .main .footer .logo img {
+    max-width: 120px;
+  }
+  body .main .footer .rights {
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
