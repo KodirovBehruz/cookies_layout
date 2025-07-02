@@ -16,8 +16,6 @@ async function loadProducts(sugarFreeFilter = null) {
     return
   }
 
-  console.log('Товары:', items)
-
   const container = document.querySelector('.products-items')
   container.innerHTML = ''
 
