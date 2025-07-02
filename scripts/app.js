@@ -10,27 +10,17 @@ for (let i = 0; i < links.length; i++) {
 }
 
 function selectProduct(productName, productPrice) {
-    document.getElementById('order').scrollIntoView({behavior: 'smooth'});
-
-    // Заполнение поля продукта
-    const productInput = document.getElementById('product');
-    productInput.value = `${productName} (${productPrice} $)`;
+    document.getElementById('order').scrollIntoView({behavior: 'smooth'})
+    const productInput = document.getElementById('product')
+    productInput.value = `${productName} (${productPrice} $)`
 }
+window.selectProduct = selectProduct
 
 function switchSugarFree(event) {
-    const isChecked = event.target.checked;
-    const products = document.querySelectorAll('.products-item');
-
-    products.forEach(product => {
-        const isSugarFree = product.classList.contains('sugar-free');
-
-        if (isChecked && !isSugarFree) {
-            product.style.display = 'none';
-        } else {
-            product.style.display = 'block';
-        }
-    })
+    const isChecked = event.target.checked
+    loadProducts(isChecked ? true : null)
 }
+window.switchSugarFree = switchSugarFree
 
 const prices = document.getElementsByClassName("products-item-price")
 document.getElementById("change-currency").onclick = function (e) {
@@ -57,26 +47,27 @@ document.getElementById("change-currency").onclick = function (e) {
         prices[i].innerText = +(prices[i].getAttribute("data-base-price") * coefficient).toFixed(1) + " " + newCurrency
     }
 }
-
-const product = document.getElementById("product");
-const name = document.getElementById("name");
-const phone = document.getElementById("phone");
 document.getElementById("order-action").onclick = function () {
-    let hasError = false;
+    const product = document.getElementById("product")
+    const name = document.getElementById("name")
+    const phone = document.getElementById("phone")
 
+    let hasError = false
     [product, name, phone].forEach(item => {
         if (!item.value) {
-            item.style.borderColor = "red";
-            hasError = true;
+            item.style.borderColor = "red"
+            hasError = true
         } else {
-            item.style.borderColor = "";
+            item.style.borderColor = ""
         }
     });
 
     if (!hasError) {
         [product, name, phone].forEach(item => {
-            item.value = "";
+            item.value = ""
         })
-        alert("Спасибо за заказ! Мы скоро свяжемся с вами!");
+        alert("Спасибо за заказ! Мы скоро свяжемся с вами!")
     }
-};
+}
+
+window.addEventListener('DOMContentLoaded', loadProducts)
